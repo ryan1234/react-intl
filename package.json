@@ -60,7 +60,7 @@
     "clean": "rimraf src/locale-data/ lib/ dist/",
     "lint": "eslint src/ scripts/ examples/",
     "build:data": "babel-node scripts/build-locale-data.js",
-    "build:lib": "babel src/ --out-dir lib/",
+    "build:lib": "babel src/ --out-dir asd/",
     "build:dist:main": "browserify src/react-intl.js -s ReactIntl -p bundle-collapser/plugin -g [envify --NODE_ENV development] -t babelify -t browserify-shim -d | exorcist -b ./ dist/react-intl.js.map > dist/react-intl.js",
     "build:dist:main:min": "browserify src/react-intl.js -s ReactIntl -p bundle-collapser/plugin -g [envify --NODE_ENV production] -t babelify -t browserify-shim | uglifyjs -c -m > dist/react-intl.min.js",
     "build:dist:with-data": "browserify src/react-intl-with-locales.js -s ReactIntl -p bundle-collapser/plugin -g [envify --NODE_ENV development] -t babelify -t browserify-shim -d | exorcist -b ./ dist/react-intl-with-locales.js.map > dist/react-intl-with-locales.js",
